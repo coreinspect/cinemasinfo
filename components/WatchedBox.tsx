@@ -1,12 +1,8 @@
 "use client";
 
-import { tempWatchedData } from "@/Data/TempData";
-import React, { useState } from "react";
-import WatchedSummary from "./WatchedSummary";
-import Watched from "./Watched";
+import React, { ReactNode, useState } from "react";
 
-const WatchedBox = () => {
-  const [watched, setWatched] = useState(tempWatchedData);
+const WatchedBox = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -24,12 +20,7 @@ const WatchedBox = () => {
         </button>
       </div>
 
-      {isOpen && (
-        <>
-          <WatchedSummary watched={watched} />
-          <Watched watched={watched} />
-        </>
-      )}
+      {isOpen && children}
     </div>
   );
 };

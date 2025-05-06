@@ -1,8 +1,6 @@
-import { tempMovieData } from "@/Data/TempData";
-import React, { useState } from "react";
+import { MovieListProps } from "@/types";
 
-const NavResult = () => {
-  const [movies, setMovies] = useState(tempMovieData);
+const NavResult = ({ movies = [] }: MovieListProps) => {
   return (
     <>
       <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 sm:mt-0">

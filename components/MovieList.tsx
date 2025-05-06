@@ -1,10 +1,7 @@
-import { tempMovieData } from "@/Data/TempData";
-
-import { useState } from "react";
 import Movie from "./Movie";
+import { MovieListProps } from "@/types";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState(tempMovieData);
+const MovieList = ({ movies }: MovieListProps) => {
   return (
     <>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

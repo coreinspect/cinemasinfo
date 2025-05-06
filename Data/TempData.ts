@@ -1,17 +1,4 @@
-// Define the base movie type with common properties
-export interface Movie {
-  imdbID: string;
-  Title: string;
-  Year: string;
-  Poster: string;
-}
-
-// Define the watched movie type which extends Movie with additional properties
-export interface WatchedMovie extends Movie {
-  runtime: number;
-  imdbRating: number;
-  userRating: number;
-}
+import { Movie, WatchedMovie } from "@/types";
 
 export const tempMovieData: Movie[] = [
   {

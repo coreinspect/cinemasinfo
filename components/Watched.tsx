@@ -1,20 +1,7 @@
 import Image from "next/image";
+import { WatchedProps } from "@/types";
 
-interface Movie {
-  imdbID: string;
-  Poster: string;
-  Title: string;
-  imdbRating: number;
-  userRating: number;
-  runtime: number;
-  Year: string;
-}
-
-interface WatchedSummaryProps {
-  watched: Movie[];
-}
-
-const Watched = ({ watched }: WatchedSummaryProps) => {
+const Watched = ({ watched }: WatchedProps) => {
   const movies = Array.isArray(watched) ? watched : [];
 
   return (

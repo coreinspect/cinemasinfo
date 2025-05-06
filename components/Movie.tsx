@@ -1,14 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
-interface MovieProps {
-  movie: {
-    imdbID: string;
-    Poster: string;
-    Title: string;
-    Year: string;
-  };
-}
+import { MovieProps } from "@/types";
 
 const Movie = ({ movie }: MovieProps) => {
   return (

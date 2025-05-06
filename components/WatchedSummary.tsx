@@ -1,14 +1,5 @@
 import React from "react";
-
-interface Movie {
-  imdbRating: number;
-  userRating: number;
-  runtime: number;
-}
-
-interface WatchedSummaryProps {
-  watched: Movie[];
-}
+import { WatchedSummaryProps } from "@/types";
 
 const average = (arr: number[]): number => {
   if (!arr || arr.length === 0) return 0;

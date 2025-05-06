@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
-import MovieList from "./MovieList";
+import React, { ReactNode, useState } from "react";
 
-const ListBox = () => {
+const ListBox = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -24,7 +22,7 @@ const ListBox = () => {
         </button>
       </div>
 
-      {isOpen && <MovieList />}
+      {isOpen && children}
     </div>
   );
 };
